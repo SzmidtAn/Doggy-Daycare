@@ -1,38 +1,297 @@
-.App {
-  text-align: center;
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+    background-color:  #f9f9f9;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+
+.itemList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    background: url(dog_backgroun.png);
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.itemList h2 {
+    width: 100vw;
+    height: 60vh;
+    background: url(dog-6082017_1920.jpg) fixed;
+    margin-top: 0;
+    top: 10px;
+    color: white;
+
+    font-size: 82px;
+    font-weight: normal;
+    box-shadow: 10px 10px 10px #a7a7a7;
+
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.item {
+    width: 330px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    box-shadow: 0 3px 15px #999999;
+    border-radius: 10px;
+    background-color: white;
+
+    overflow: hidden;
+
 }
 
-.App-link {
-  color: #61dafb;
+.item img {
+    width: 100%;
+    max-height: 50%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0 ;
+    border-bottom: 7px solid #ffcc67;
+    transition: 2s;
+
+
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item h3 {
+    width: 80%;
+    margin-bottom: 10px;
+    font: 700 20px "Poppins", sans-serif;
+    align-self: center;
+    text-align: start;
+
+
+    text-transform: uppercase;
 }
+
+
+
+.item h5 {
+    font: 500 15px "Poppins", sans-serif;
+    font-weight: bold;
+
+
+margin: 0;
+
+
+}
+
+.item p {
+    margin: 0;
+    color: #999;
+
+
+}
+
+.item:hover img {
+    transform: scale(1.15);
+
+}
+
+
+
+
+
+
+
+.itemDetails div {
+ display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+
+
+}
+
+.itemDetails{
+    width: 80%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+
+.item a {
+    outline: none;
+    width: 80%;
+    text-align: center;
+    display: inline-block;
+    border: none;
+    font: 500 16px/1 "Poppins", sans-serif;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    background: #ff9557;
+    color: white;
+    position: relative;
+    transition: 0.9s ease;
+    margin: auto 0 15px;
+}
+
+.item a:hover {
+    background-color: #f66f22;
+    box-shadow: 10px 10px 10px;
+    transform: scale(1.01);
+
+
+
+}
+
+
+.homePage {
+    height: 100vh;
+    width: 100vw;
+    background: url(dog-4099038_1920.jpg);
+    margin: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.homePage .Welcome {
+    background-color: #f9f9f990;
+    width: 790px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+
+
+
+
+}
+
+.Welcome h1 {
+    font-weight: 900;
+    font-size: 92px;
+    color: #5d5258;
+    margin-bottom: 0;
+    line-height: 1;
+
+}
+
+.Welcome h2 {
+    margin-top: 0;
+    text-align: start;
+    color: #5d5258;
+
+}
+
+
+.Welcome h3 {
+
+    font-size: 32px;
+    color: #c32828;
+    margin-top: 0;
+    animation: blink 2s ease-in;
+
+}
+
+@keyframes blink
+{
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+.Welcome h3 {
+
+}
+
+
+
+.DogPage {
+    width: 100vw;
+    height: 100vh;
+    background: #63cab4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.DogInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 900px;
+    height: 600px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px #737373;
+}
+
+.DogInfo img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: solid 10px #c66917;
+    transform: translateY(-50%);
+    object-fit: cover;
+    position: relative;
+
+
+}
+
+
+.DogInfo .Specification {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.DogInfo .Specification div {
+    padding: 0 100px;
+
+    flex-direction: row;
+
+}
+
+.OwnerSpec {
+    border-left: solid 5px blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
