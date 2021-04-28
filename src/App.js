@@ -1,7 +1,8 @@
 import './App.css';
 import  {
     Route,
-    BrowserRouter
+    Switch,
+    BrowserRouter as Router
 } from "react-router-dom";
 import {Welcome} from "./Pages/Welcome";
 import {Register} from "./Pages/Register";
@@ -13,16 +14,26 @@ import React from "react";
 function App() {
   return (
     <div className="App">
-        <BrowserRouter>
+
+        <Router  basename={`${process.env.PUBLIC_URL}/`}>
             <div>
 
-                <Route  exact path="/welcome" component={Welcome} />
-                <Route  path="/register" component={Register} />
-                <Route  path="/details" component={DogPage} />
+
+                <Switch>
+
+                    <Route exact path="/details" component={DogPage} />
 
 
+                    <Route exact path="/register/" component={Register} />
+
+                    <Route path="/" component={Welcome}>
+                    </Route>
+
+                </Switch>
             </div>
-        </BrowserRouter>
+        </Router>
+
+
 
     </div>
   );

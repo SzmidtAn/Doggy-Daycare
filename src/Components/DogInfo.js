@@ -1,10 +1,10 @@
 import React from "react";
 
-export const DogInfo = ({dog, name, age, image, breed, sex}) => {
+export const DogInfo = ({dog}) => {
     return (
         <div className="DogInfo">
 
-            <img src={image}/>
+            <img src={dog.img}/>
             <h3>{dog.name} </h3>
 
             <div className="Specification">
@@ -13,17 +13,17 @@ export const DogInfo = ({dog, name, age, image, breed, sex}) => {
 
                 <div>
                     <p>BREED</p>
-                    <h5>{breed}</h5>
+                    <h5>{dog.breed}</h5>
                 </div>
 
                 <div>
                     <p>AGE</p>
-                    <h5>{age} </h5>
+                    <h5>{dog.age} </h5>
                 </div>
 
                 <div>
                     <p>SEX</p>
-                    <h5>{sex}</h5>
+                    <h5>{dog.sex}</h5>
                 </div>
 
                 </div>

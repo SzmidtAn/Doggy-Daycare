@@ -2,14 +2,15 @@ import React from "react";
 import ItemService from "../Services/item-service"
 import {DogInfo} from "../Components/DogInfo";
 import {Item} from "../Components/ItemList";
+import {Redirect} from "react-router-dom";
 
 export class DogPage extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            items: [],
-            dog: ""
+            items: []
+
         };
     }
 
@@ -55,7 +56,6 @@ export class DogPage extends React.Component {
 
 
 
-
     }
 
 
@@ -67,7 +67,10 @@ export class DogPage extends React.Component {
         return (
             <div className="DogPage" >
 
-                  { this.itemToItem(this.state.dog)}
+                {this.state.dog ?
+                    <DogInfo  key={this.state.dog} dog={this.state.dog} />
+                    : "nothing" }
+
 
             </div>
         );
