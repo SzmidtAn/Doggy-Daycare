@@ -32,15 +32,6 @@ export class DogPage extends React.Component {
     }
 
 
-    itemToItem  = (item) => {
-        const name = item.name
-        const age = item.age
-        const breed = item.breed
-        const sex= item.sex
-        const image= item.img
-
-        return <DogInfo  key={name} name={name} dog={item} age={age} breed={breed} sex={sex} image={image}/>;
-        }
 
     findDogByName(data) {
 

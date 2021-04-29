@@ -18,19 +18,24 @@ body {
     justify-content: center;
     align-items: center;
     gap: 100px;
-    background: url(dog_backgroun.png);
+    background: url(static/dog_backgroun.png);
+    text-transform: capitalize;
+
 
 }
 
 .itemList h2 {
     width: 100vw;
-    height: 60vh;
-    background: url(dog-6082017_1920.jpg) fixed;
+    height: 50vh;
+    background: url(static/dog-6082017_1920.jpg) fixed;
+    background-size: cover;
+
     margin-top: 0;
     top: 10px;
-    color: white;
-
+    color: #eeeeee;
+    padding-top: 100px;
     font-size: 82px;
+    font-family: "Helvetica Neue", serif;
     font-weight: normal;
     box-shadow: 10px 10px 10px #a7a7a7;
 
@@ -112,6 +117,7 @@ margin: 0;
     text-align: start;
 
 
+
 }
 
 .itemDetails{
@@ -122,6 +128,7 @@ margin: 0;
     justify-content: space-between;
     align-items: center;
     margin: auto;
+
 }
 
 
@@ -155,7 +162,8 @@ margin: 0;
 .homePage {
     height: 100vh;
     width: 100vw;
-    background: url(dog-4099038_1920.jpg);
+    background: url(static/dog-4099038_1920.jpg);
+    background-size: cover;
     margin: 0;
     position: absolute;
     display: flex;
@@ -167,8 +175,10 @@ margin: 0;
 
 .homePage .Welcome {
     background-color: #f9f9f990;
-    width: 790px;
-    height: 450px;
+    max-width: 790px;
+    width: 60%;
+    max-height: 450px;
+    height: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -223,10 +233,12 @@ margin: 0;
 .DogPage {
     width: 100vw;
     height: 100vh;
-    background: #63cab4;
+    background: linear-gradient(#f5f7fa  , #c3cfe2);
     display: flex;
     justify-content: center;
     align-items: center;
+    text-transform: capitalize;
+
 
 }
 
@@ -242,15 +254,21 @@ margin: 0;
     box-shadow: 10px 10px 20px #737373;
 }
 
-.DogInfo img {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    border: solid 10px #c66917;
-    transform: translateY(-50%);
+.DogInfo > img {
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     position: relative;
+    box-shadow: 10px 10px 15px #c1c1c1;
+    margin-top: 20px;
 
+
+}
+
+.DogInfo .active {
+    font-weight: bold;
+    margin-top: 0;
 
 }
 
@@ -262,23 +280,138 @@ margin: 0;
     height: 100%;
     justify-content: center;
     align-items: center;
+    padding-bottom: 50px;
 }
 
 .DogInfo .Specification div {
-    padding: 0 100px;
+    margin: 0 50px;
 
     flex-direction: row;
 
 }
 
-.OwnerSpec {
-    border-left: solid 5px blue;
+
+
+.DogSpec div,
+.OwnerSpec div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+
+}
+
+.Specification  div  img {
+    width: auto;
+    height: 30px;
+
+
+
+}
+
+.Specification h5 {
+
+   text-align: start;
+    max-lines: 1;
+
+}
+
+.verticalLine {
+    position: absolute;
+    background-color: blue;
+    width: 4px;
+    height: 25vh;
+
 }
 
 
+/*************** MEDIA ********************/
+
+@media only screen and (max-width: 1040px) {
+    body {
+
+    }
+
+    .homePage  {
+        background-size: cover;
+        background: url(static/frenchbull.png);
+
+    }
+
+    .homePage .Welcome {
+        width: 90%;
+        height: 40%;
+        background-color: rgba(212, 212, 212, 0.6);
+
+    }
+
+    .homePage .Welcome h1
+    {
+        font-size: 40px;
+        color: #353131;
+    }
+
+    .homePage .Welcome h3{
+        font-size: 25px;
+    }
+
+
+    .itemList h2 {
+        font-size: 62px;
+    }
+
+
+    .DogInfo {
+        width: 100%;
+
+    }
+
+    .DogInfo .Specification{
+
+        width: 80%;
+        justify-content: space-between;
 
 
 
+    }
+
+    .DogInfo .Specification div {
+        padding: 0;
+        margin: 0;
+        justify-content: start;
+    }
+
+    .DogSpec div,
+    .OwnerSpec div {
+        gap: 10px;
+        justify-content: center;
+
+    }
+
+    .Specification  div  img {
+        width: auto;
+        height: 30px;
+
+
+
+    }
+
+    .verticalLine {
+        left: 50%;
+    }
+
+
+
+
+
+
+
+
+
+
+
+}
 
 
 
