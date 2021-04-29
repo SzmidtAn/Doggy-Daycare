@@ -12,12 +12,9 @@ class ItemService {
             });
     }
 
-
     getCurrentData() {
         return JSON.parse(localStorage.getItem('data'));
     }
-
 }
-
 
 export default new ItemService();

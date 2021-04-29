@@ -6,9 +6,6 @@ import img4 from '../static/chip.png'
 import img5 from '../static/calendar.png'
 import img6 from '../static/phone-call.png'
 
-
-
-
 export const DogInfo = ({dog}) => {
     return (
         <div className="DogInfo">
@@ -19,8 +16,6 @@ export const DogInfo = ({dog}) => {
                     <p className="active" style={{color: "green"}}>ACTIVE</p>
                     : <p className="active" style={{color: "red"}}>INACTIVE</p>
                     }
-
-
 
             <div className="Specification">
 
@@ -51,8 +46,6 @@ export const DogInfo = ({dog}) => {
                     <h5>{dog.chipNumber}</h5>
                 </div>
 
-
-
                 </div>
 
                 <div className="verticalLine" />
@@ -64,8 +57,6 @@ export const DogInfo = ({dog}) => {
                         <h5>{dog.owner.name} {dog.owner.lastName}</h5>
                     </div>
 
-
-
                     <div>
                         <img src={img6}/>
 
@@ -75,8 +66,6 @@ export const DogInfo = ({dog}) => {
                 </div>
 
             </div>
-
-
 
         </div>
     );

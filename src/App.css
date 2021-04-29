@@ -24,7 +24,7 @@ body {
 
 }
 
-.itemList h2 {
+.ItemListHeader h2 {
     width: 100vw;
     height: 50vh;
     background: url(static/dog-6082017_1920.jpg) fixed;
